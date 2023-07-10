@@ -3,7 +3,7 @@ import scipy.special # sigmoid function
 from typing import List
 
 
-class NeuralNet:
+class NeuralNetOH:
     """
     A neural network with one hidden layer.
     """

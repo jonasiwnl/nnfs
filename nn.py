@@ -4,7 +4,7 @@ import scipy.special # sigmoid function
 from typing import List
 
 
-class NeuralNetMH:
+class NeuralNet:
     """
     A neural network with multiple hidden layers.
     """
