@@ -1,4 +1,11 @@
+from typing import List
+
 from nn_one_hidden import NeuralNetOH
+
+
+def epoch_single_train(n: NeuralNetOH, training_data: List[str], epochs: int):
+    for i in range(epochs):
+        n.train(training_data[i][1:], training_data[i][0])
 
 
 def main():
@@ -15,7 +22,11 @@ def main():
         training_data = f.readlines()
     """
 
-    print(n.query([1.0, 0.5, -1.5, 0.8, 0.5]))
+    epoch_single_train(n, training_data, 100)
+
+    output = n.query([1.0, 0.5, -1.5, 0.8, 0.5])
+    print(output)
+    print(n.backquery(output))
 
 
 if __name__ == "__main__":
